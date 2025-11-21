@@ -15,5 +15,4 @@
 4️ **DOM Manipulation (Document Object Model):**  
    - `document.title = "Hey I am good";` → Changes the page title dynamically.  
    - `document.body.style.backgroundColor = "yellow";` → Changes the background color.  
-   - **(Error in your code: `document.title.body.style.backgroundColor` should be `document.body.style.backgroundColor`)**  
 
