@@ -33,6 +33,7 @@ y = 12; // ✅ Allowed
 
 console.log(x, y, z);
 ```
+<img width="693" height="369" alt="image" src="https://github.com/user-attachments/assets/3fdf1f9b-b541-4a88-ba8f-5d7ed896000c" />
 
 ---
 
