@@ -43,6 +43,8 @@ JavaScript Variable Naming Rules
 -Cannot be a reserved keyword (var, let, if, for, etc.).
 -No spaces or special characters (like @, #, !).
 
+The typeof, instanceof, and Object.prototype.toString.call() methods can all be used to check a variable’s type.
+
 ```
 <img width="693" height="369" alt="image" src="https://github.com/user-attachments/assets/3fdf1f9b-b541-4a88-ba8f-5d7ed896000c" />
 
