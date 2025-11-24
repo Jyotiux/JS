@@ -222,9 +222,6 @@ function outer() {
 * `console.warn()` → warning
 * `console.error()` → error
 * `console.info()` → info message
-* `console.assert()` ->  logs an error message if the given condition is false, helping to catch issues during development. If the condition is true, it produces no output.
-
-
 
 
 
