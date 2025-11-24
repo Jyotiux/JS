@@ -64,7 +64,7 @@ console.log(str[str.length - 1]); // "i"
 
 ---
 
-Here's the updated table with additional string methods:  
+Table with additional string methods:  
 
 ### **Some points**  
 | Method | Description | Example | Output |  
