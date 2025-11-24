@@ -32,6 +32,17 @@ y = 12; // ✅ Allowed
 // z = 20; ❌ Not allowed (const cannot be changed)
 
 console.log(x, y, z);
+
+
+A declared variable without a value is of type undefined
+
+JavaScript Variable Naming Rules
+-Can contain letters (a-z, A-Z), digits (0-9), $ and _.
+-Must begin with a letter, $, or _ (cannot start with a digit).
+-Case-sensitive (myVar ≠ myvar).
+-Cannot be a reserved keyword (var, let, if, for, etc.).
+-No spaces or special characters (like @, #, !).
+
 ```
 <img width="693" height="369" alt="image" src="https://github.com/user-attachments/assets/3fdf1f9b-b541-4a88-ba8f-5d7ed896000c" />
 
