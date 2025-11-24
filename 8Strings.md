@@ -91,3 +91,11 @@ Table with additional string methods:
 
 
 
+---
+
+console.log(5 + 5 + "5");
+Its Output
+"105"
+
+
+
