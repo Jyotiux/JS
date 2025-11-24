@@ -1,0 +1,256 @@
+
+---
+
+# **1. Operators (with simple explanations)**
+
+### **Arithmetic Operators**
+
+Used for mathematical operations:
+
+* `+` add
+* `-` subtract
+* `*` multiply
+* `/` divide
+* `%` remainder
+* `**` exponent (power)
+* `++` increment, `--` decrement
+
+### **Assignment Operators**
+
+Assign or update values:
+
+* `=` set a value
+* `+=` add and assign (`x += 2` → `x = x + 2`)
+* Similarly: `-=`, `*=`, `/=`, `%=`, `**=`
+
+### **Comparison Operators**
+
+Used to compare values:
+
+* `==` compares values (allows type conversion)
+* `===` compares values + types (recommended)
+* `!=`, `!==` opposites
+* `>`, `<`, `>=`, `<=`
+
+### **Logical Operators**
+
+Used for combining conditions:
+
+* `&&` AND → both must be true
+* `||` OR → at least one true
+* `!` NOT → flips true/false
+
+**Short-circuiting:**
+
+* With `&&` → if first is false, second won’t run
+* With `||` → if first is true, second won’t run
+
+### **Nullish Coalescing (`??`)**
+
+Returns the right side only if left side is **null or undefined**.
+
+```js
+let x = null ?? "default"; // "default"
+```
+
+### **Optional Chaining (`?.`)**
+
+Safely access nested properties without errors.
+
+```js
+user?.address?.city
+```
+
+### **Ternary Operator**
+
+Short form of if-else:
+
+```js
+condition ? valueIfTrue : valueIfFalse
+```
+
+---
+
+# **2. Type Conversion and Coercion**
+
+### **Explicit Conversion (Manual)**
+
+You convert the type yourself:
+
+* `String(value)` → converts to string
+* `Number(value)` → converts to number
+* `Boolean(value)` → converts to true/false
+* `parseInt("10")`, `parseFloat("10.5")`
+
+### **Implicit Conversion (Auto / Coercion)**
+
+JS automatically converts types:
+
+* `"5" + 1` → `"51"` (string)
+* `"5" - 1` → `4` (number)
+* `true + 1` → `2`
+* `false == 0` → `true` (because of coercion)
+
+### **Falsy Values** (convert to false)
+
+`0`, `""`, `null`, `undefined`, `NaN`, `false`
+
+Everything else is **truthy**.
+
+### **Special Notes**
+
+* `Number("   ")` → `0`
+* `Number("")` → `0`
+* `Number("abc")` → `NaN`
+
+---
+
+# **3. Control Flow Statements**
+
+### **Conditional Statements**
+
+Used to make decisions:
+
+```js
+if (condition) {
+  // run if true
+} else if (...) {
+  // another case
+} else {
+  // run if all above false
+}
+```
+
+### **Switch Statement**
+
+Good for checking one value against many cases:
+
+```js
+switch (value) {
+  case 1: ...
+  default: ...
+}
+```
+
+### **Loops**
+
+To repeat code:
+
+* `for` → known number of repetitions
+* `while` → repeats until condition is false
+* `do...while` → runs at least once
+* `for...of` → loops over *array values*
+* `for...in` → loops over *object keys*
+
+### **Break / Continue**
+
+* `break` → exits loop
+* `continue` → skips current iteration
+
+### **Error Handling**
+
+```js
+try {
+  // code that may fail
+} catch (error) {
+  // handle error
+} finally {
+  // always runs
+}
+```
+
+`throw` → custom errors
+
+```js
+throw "Something went wrong";
+```
+
+---
+
+# **4. Scope**
+
+### **Types of Scope**
+
+🔹 **Global Scope**
+Available everywhere.
+
+🔹 **Function Scope** (var)
+Variables declared with **var** exist only inside a function.
+
+🔹 **Block Scope** (let, const)
+Variables with **let** and **const** exist only inside `{ }`.
+
+### **Lexical Scope**
+
+Inner functions can use variables from outer functions.
+
+```js
+function a() {
+  let x = 10;
+  function b() { console.log(x); } // allowed
+}
+```
+
+### **Hoisting**
+
+JavaScript moves declarations to top:
+
+* **var** → hoisted as `undefined`
+* **let/const** → hoisted but NOT usable until declared (Temporal Dead Zone)
+* **function declarations** → fully hoisted
+
+### **Closures**
+
+A function remembers variables outside its scope.
+
+```js
+function outer() {
+  let count = 0;
+  return function inner() {
+    return count++;
+  };
+}
+```
+
+---
+
+# **5. Browser Console**
+
+### **Basic Logs**
+
+* `console.log()` → normal output
+* `console.warn()` → warning
+* `console.error()` → error
+* `console.info()` → info message
+
+### **Useful Tools**
+
+* `console.table(object)` → shows objects/arrays in table form
+* `console.dir(element)` → prints DOM element as an object
+* `console.assert(condition, message)` → prints message if condition is false
+
+### **Timers**
+
+```js
+console.time("task");
+// some code
+console.timeEnd("task");
+```
+
+### **Grouping Logs**
+
+```js
+console.group("Details");
+console.log("A");
+console.log("B");
+console.groupEnd();
+```
+
+### **Debugging**
+
+* Set breakpoints in DevTools → Sources tab
+* Inspect values by hovering
+* Use console to test JS live
+
+---
+
